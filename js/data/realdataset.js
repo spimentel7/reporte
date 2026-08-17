@@ -8,7 +8,7 @@
   MedApp.RealData = {
     version: 2,
     source: "server-sync",
-    generatedAt: 1786645666,
+    generatedAt: 1786997756,
     rates: {"UI Las Delicias":1.2,"CIMED":0.85,"Hospital de Clínicas Caracas":1,"U.I. del Caribe":0.8,"GAMMA":1.2,"DiagnoMed":0.92,"Imágenes Médicas Carupano":0.85,"I.R. Ladera":1.2,"DISI":1.2,"H. San Juan de Dios":1.2,"Clinica Lugo":1.2,"Consultorio LFM":1,"CEMO":0.85,"Egoavil Sardinas - ESVET":1.2,"Clinica Nano Salud":1.2,"Hospital San Antonio de Táriba":0.84,"Centro Clínico Familia":0.85,"Super Salud":1.2,"Centro de Imágenes Carora":1.2,"Centro Clínico Infantil Rodríguez Rodríguez":1.2,"Clinica AMP":1.2,"Lancaster":1,"SISMED":0.92,"Lara Salud":1.2,"EVALUEX":1.2,"Asociación Civil Federico Ozanam":0.9,"UI San Francisco":1.2,"Unifemme":0.85,"ALFA":1.2,"Venemergencias":1.2,"Vista California":1.2,"Imagen Salud Bravo":0.9,"SONOLIFE":1.2,"Cecosesola":0.85,"Los Cedros":1.2,"UD Caura":1,"C.M. Valle de San Diego":1.2,"Piedra Azul":1.2,"TAC Helimed":0.85},
     records: [
          {
@@ -18490,6 +18490,41 @@
            "client": "TAC Helimed",
            "modality": "CR",
            "studies": 253
+         },
+         {
+           "year": 2026,
+           "month": 8,
+           "client": "ALFA",
+           "modality": "US",
+           "studies": 4320
+         },
+         {
+           "year": 2026,
+           "month": 8,
+           "client": "ALFA",
+           "modality": "MR",
+           "studies": 2440
+         },
+         {
+           "year": 2026,
+           "month": 8,
+           "client": "ALFA",
+           "modality": "CR",
+           "studies": 9590
+         },
+         {
+           "year": 2026,
+           "month": 8,
+           "client": "ALFA",
+           "modality": "MG",
+           "studies": 180
+         },
+         {
+           "year": 2026,
+           "month": 8,
+           "client": "ALFA",
+           "modality": "CT",
+           "studies": 5700
          }
        ]
   };
