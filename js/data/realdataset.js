@@ -18570,7 +18570,6 @@
 {year:2026,month:8,client:"UI Las Delicias",modality:"CR",studies:35},
 {year:2026,month:8,client:"UI Las Delicias",modality:"CT",studies:20},
 {year:2026,month:8,client:"UI San Francisco",modality:"CT",studies:80},
-{year:2026,month:8,client:"UI San Francisco",modality:"MG",studies:25}
        ]
   };
 })(window);
