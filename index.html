@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MP Clinical Software — Gestión y Análisis de Estudios</title>
+  <meta name="description" content="Plataforma de gestión, visualización y análisis estadístico de estudios médicos multi-centro (2023-2026)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="MP.PNG" />
+</head>
+<body>
+  <div id="loginPage" class="login-page" style="display:none">
+    <div class="login-card">
+      <img class="login-logo" src="Logo-MP-Clinical-Software-1.png" alt="MP Clinical Software" />
+      <h1>Bienvenido</h1>
+      <p>Ingrese sus credenciales para acceder</p>
+      <form id="loginForm" class="login-form">
+        <div class="field">
+          <label class="label" for="loginUser">Usuario</label>
+          <input type="text" id="loginUser" class="control" placeholder="Ingrese su usuario" required autocomplete="username" />
+        </div>
+        <div class="field">
+          <label class="label" for="loginPass">Contraseña</label>
+          <input type="password" id="loginPass" class="control" placeholder="Ingrese su contraseña" required autocomplete="current-password" />
+        </div>
+        <div id="loginError" class="login-error" style="display:none"></div>
+        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+      </form>
+      <p class="login-hint">Administrador: admin / admin123<br>Usuario: usuario / usuario123</p>
+    </div>
+  </div>
+
+  <header class="topbar" id="topbar" style="display:none">
+    <div class="brand">
+      <img class="brand-logo" src="Logo-MP-Clinical-Software-1.png" alt="MP Clinical Software" />
+      <span class="brand-name">Análisis <span>de Estudios</span></span>
+    </div>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <button class="nav-link is-active" data-view="dashboard">Dashboard</button>
+      <button class="nav-link" data-view="explorer">Explorar datos</button>
+      <button class="nav-link" data-view="clients">Clientes</button>
+      <button class="nav-link" data-view="modalities">Modalidades</button>
+      <button class="nav-link" data-view="finance">Financiero</button>
+      <button class="nav-link nav-admin" data-view="upload">Carga de datos</button>
+      <button class="nav-link nav-admin" data-view="datamanager">Gestionar datos</button>
+    </nav>
+    <div class="topbar-actions">
+      <span id="userBadge" class="user-badge"></span>
+      <button class="icon-btn" id="logoutBtn" title="Cerrar sesión" aria-label="Cerrar sesión" style="display:none">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+      </button>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" aria-label="Cambiar tema">
+        <svg id="iconSun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <svg id="iconMoon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="app" class="container" role="main" aria-label="Contenido principal"></main>
+
+  <footer class="app-footer">
+    <span>MP Clinical Software · Análisis estadístico de estudios · Datos: 2023–2026</span>
+    <span id="dataStatus" class="data-status">Cargando…</span>
+  </footer>
+
+  <div id="toastRoot" class="toast-root" aria-live="assertive" role="alert"></div>
+
+  <script src="js/vendor/chart.umd.min.js"></script>
+  <script src="js/vendor/papaparse.min.js"></script>
+  <script src="js/vendor/xlsx.full.min.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/data/generator.js"></script>
+  <script src="js/data/realdataset.js"></script>
+  <script src="js/data/store.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/core/queries.js"></script>
+  <script src="js/core/filters.js"></script>
+  <script src="js/core/lifecycle.js"></script>
+  <script src="js/charts/base.js"></script>
+  <script src="js/ui/theme.js"></script>
+  <script src="js/ui/kpi.js"></script>
+  <script src="js/ui/helpers.js"></script>
+  <script src="js/ui/table.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/explorer.js"></script>
+  <script src="js/views/clients.js"></script>
+  <script src="js/views/modalities.js"></script>
+  <script src="js/views/finance.js"></script>
+  <script src="js/views/upload.js"></script>
+  <script src="js/views/datamanager.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
